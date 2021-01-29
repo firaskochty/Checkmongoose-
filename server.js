@@ -56,14 +56,14 @@ Person.create([
 
 // Find all the people having a given name
 
-Person.find({ name: 'Ahmed' }, (err, data) => {
+Person.find({ name: 'Firas' }, (err, data) => {
     err ? console.error(err) : console.log(`There are ${data.length} person having name = Ahmed`)
 })
 
 //FindOne operation by favorite food
 
-Person.findOne({ favoriteFoods: 'Frawla' }, (err, data) => {
-    err ? console.error(err) : console.log(`${data.name} like Frawla`)
+Person.findOne({ favoriteFoods: 'Fraise' }, (err, data) => {
+    err ? console.error(err) : console.log(`${data.name} like Fraise`)
 })
 
 // Find a Model by ID
@@ -85,7 +85,7 @@ Person.findByIdAndUpdate("60075f6af7a2300b381dc9a5", { $push: { favoriteFoods: "
 
 // Find One and Update 
 
-Person.findOneAndUpdate({ name: "Hend" }, { age: '20' }, { new: true }, (err, data) => {
+Person.findOneAndUpdate({ name: "oussema" }, { age: '20' }, { new: true }, (err, data) => {
     err ? console.error(err) : console.log('Your data updated ' + data.name + ' ' + data.age + ' ans')
 })
 
@@ -97,7 +97,7 @@ Person.findByIdAndRemove("60075f6af7a2300b381dc9a5", (err, data) => {
 
 //Delete Many Documents with model.remove()
 
-Person.remove({ name: "Mary" }, (err) => {
+Person.remove({ name: "hejer" }, (err) => {
     err ? console.error(err) : console.log('All document with name Mary are remved')
 })
 
